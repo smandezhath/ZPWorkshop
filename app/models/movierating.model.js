@@ -18,6 +18,6 @@ module.exports = (mongoose) => {
     return object;
   });
 
-  const blob = mongoose.model("movierating", schema);
-  return blob;
+  const movierating = mongoose.model("movierating", schema);
+  return movierating;
 };
