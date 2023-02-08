@@ -4,7 +4,6 @@ const Blog = db.blog;
 // Create and Save a new Policy
 exports.create = (req, res) => {
   debugger;
-  debugger;
   // Validate request
   if (!req.body.title) {
     res.status(400).send({ message: "Content cannot be empty!" });

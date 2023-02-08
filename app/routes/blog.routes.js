@@ -1,4 +1,7 @@
-module.exports = (app) => {
+const serverless = require("serverless-http");
+
+module.exports.handler = serverless((app) => {
+  // module.exports = (app) => {
   const blog = require("../controllers/blog.controller.js");
 
   var router = require("express").Router();
@@ -19,4 +22,4 @@ module.exports = (app) => {
   router.delete("/:id", blog.delete);
 
   app.use("/api/blog", router);
-};
+});
